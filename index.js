@@ -25,6 +25,8 @@ var fixBannerLink = function () {
       $(this).attr('href', 'https://ucsf.idm.oclc.org/login?qurl=' + encodeURIComponent(location.href));
     }
   });
+
+  window.addEventListener('hashchange', fixBannerLink);
 }
 
 $().ready(fixBannerLink);
