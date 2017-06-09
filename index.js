@@ -21,7 +21,7 @@ var fixBannerLink = function () {
   
   links.each(function() {
     if (/^Off the UCSF network/.test(this.text)) {
-      this.href = 'https://ucsf.idm.oclc.org/login?qurl=' + encodeURIComponent(location.href);
+      $(this).attr('href', 'https://ucsf.idm.oclc.org/login?qurl=' + encodeURIComponent(location.href));
     }
   });
 }
