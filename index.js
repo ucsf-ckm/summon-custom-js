@@ -9,3 +9,11 @@ node.innerHTML += '.relatedLibrarian.content,.relatedTopics.content,.researchGui
 // node.innerHTML += '.selector { font-size: large }';
 
 document.body.appendChild(node);
+
+// Fix off-campus login link to redirect to current search results after login.
+// We're going to depend on Summon's dependence on jQuery here.
+
+$().ready(function() {
+  $('.vpnBanner.customAuthBanner div a')
+    .attr('href', 'https://ucsf.idm.oclc.org/login?qurl=' + encodeURIComponent(location.href));
+});
