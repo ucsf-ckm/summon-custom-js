@@ -22,6 +22,7 @@ document.body.appendChild(node);
       return;
     } else {
       waitingForInitialLoad = false;
+      window.addEventListener('hashchange', fixBannerLink);
     }
     
     links.each(function() {
@@ -30,8 +31,6 @@ document.body.appendChild(node);
         $(this).attr('href', 'https://ucsf.idm.oclc.org/login?qurl=' + encodeURIComponent(location.href));
       }
     });
-
-    window.addEventListener('hashchange', fixBannerLink);
   }
 
   $().ready(fixBannerLink);
