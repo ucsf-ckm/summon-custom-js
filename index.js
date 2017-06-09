@@ -12,8 +12,16 @@ document.body.appendChild(node);
 
 // Fix off-campus login link to redirect to current search results after login.
 // We're going to depend on Summon's dependence on jQuery here.
+var fixBannerLink = function () {
+  // This is a terrible hack, but if FastClick exists, the Summon AngularJS app
+  // is loaded.
+  if (FastClick) {
+    $('.vpnBanner.customAuthBanner div a')
+      .attr('href', 'https://ucsf.idm.oclc.org/login?qurl=' + encodeURIComponent(location.href));
+  } else {
+    // Also a terrible hack: poll again in 100ms
+    setTimeout(fixBannerLink, 100);
+  }
+}
 
-$().ready(function() {
-  $('.vpnBanner.customAuthBanner div a')
-    .attr('href', 'https://ucsf.idm.oclc.org/login?qurl=' + encodeURIComponent(location.href));
-});
+$().ready(fixBannerLink);
