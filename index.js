@@ -12,21 +12,26 @@ document.body.appendChild(node);
 
 // Fix off-campus login link to redirect to current search results after login.
 // We're going to depend on Summon's dependence on jQuery here.
-var fixBannerLink = function () {
-  var links = $('.vpnBanner.customAuthBanner div a');
-  if (links.length === 0) {
-    setTimeout(fixBannerLink, 100);
-    return;
-  }
-  
-  links.each(function() {
-    if (/^Off the UCSF network/.test(this.text)) {
-      $(this).attr('ng-href', 'https://ucsf.idm.oclc.org/login?qurl=' + encodeURIComponent(location.href));
-      $(this).attr('href', 'https://ucsf.idm.oclc.org/login?qurl=' + encodeURIComponent(location.href));
+(function () {
+  var waitingForInitialLoad = true;
+
+  var fixBannerLink = function () {
+    var links = $('.vpnBanner.customAuthBanner div a');
+    if (links.length === 0 && waitingForInitialLoad) {
+      setTimeout(fixBannerLink, 100);
+      return;
     }
-  });
+    waitingForInitialLoad = false;
+    
+    links.each(function() {
+      if (/^Off the UCSF network/.test(this.text)) {
+        $(this).attr('ng-href', 'https://ucsf.idm.oclc.org/login?qurl=' + encodeURIComponent(location.href));
+        $(this).attr('href', 'https://ucsf.idm.oclc.org/login?qurl=' + encodeURIComponent(location.href));
+      }
+    });
 
-  window.addEventListener('hashchange', fixBannerLink);
-}
+    window.addEventListener('hashchange', fixBannerLink);
+  }
 
-$().ready(fixBannerLink);
+  $().ready(fixBannerLink);
+}());
