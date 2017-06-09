@@ -17,11 +17,12 @@ document.body.appendChild(node);
 
   var fixBannerLink = function () {
     var links = $('.vpnBanner.customAuthBanner div a');
-    if (links.length === 0 && waitingForInitialLoad) {
+    if (waitingForInitialLoad && links.length === 0) {
       setTimeout(fixBannerLink, 100);
       return;
+    } else {
+      waitingForInitialLoad = false;
     }
-    waitingForInitialLoad = false;
     
     links.each(function() {
       if (/^Off the UCSF network/.test(this.text)) {
