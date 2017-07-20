@@ -2,8 +2,8 @@
 
 var node = document.createElement('style');
 node.innerHTML = '.siteLinks ul li:first-child,.siteLinks .languageSwitcher{display:none;}'; // hide redundant links in hamburger menu
-node.innerHTML += '.topicSummary .content {display:none;}'; // hide wikipedia panel
-node.innerHTML += '.topicSummary .relatedLibrarian.content,.topicSummary .relatedTopics.content,.topicSummary .researchGuides.content {display:block;}' // show relevant panels
+//node.innerHTML += '.topicSummary .content {display:none;}'; // hide wikipedia panel
+//node.innerHTML += '.topicSummary .relatedLibrarian.content,.topicSummary .relatedTopics.content,.topicSummary .researchGuides.content {display:block;}' // show relevant panels
 
 // To add more CSS, use lines like this:
 // node.innerHTML += '.selector { font-size: large }';
