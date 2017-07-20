@@ -11,10 +11,10 @@ node.innerHTML += '.topicSummary .relatedLibrarian.content,.topicSummary .relate
 document.body.appendChild(node);
 
 
-/* BEGIN QUALTRICS */
-var summonNode = document.createElement('div');
-summonNode.setAttribute('id', 'SI_5iQfYTafpglJOIZ');
-document.body.appendChild(summonNode);
+// BEGIN QUALTRICS 
+var qualtricsNode = document.createElement('div');
+qualtricsNode.setAttribute('id', 'SI_5iQfYTafpglJOIZ');
+document.body.appendChild(qualtricsNode);
 (function(){var g=function(e,h,f,g){
 this.get=function(a){for(var a=a+"=",c=document.cookie.split(";"),b=0,e=c.length;b<e;b++){for(var d=c[b];" "==d.charAt(0);)d=d.substring(1,d.length);if(0==d.indexOf(a))return d.substring(a.length,d.length)}return null};
 this.set=function(a,c){var b="",b=new Date;b.setTime(b.getTime()+6048E5);b="; expires="+b.toGMTString();document.cookie=a+"="+c+b+"; path=/; "};
@@ -22,7 +22,7 @@ this.check=function(){var a=this.get(f);if(a)a=a.split(":");else if(100!=e)"v"==
 this.go=function(){if(this.check()){var a=document.createElement("script");a.type="text/javascript";a.src=g+ "&t=" + (new Date()).getTime();document.body&&document.body.appendChild(a)}};
 this.start=function(){var a=this;window.addEventListener?window.addEventListener("load",function(){a.go()},!1):window.attachEvent&&window.attachEvent("onload",function(){a.go()})}};
 try{(new g(100,"r","QSI_S_SI_5iQfYTafpglJOIZ","//zn0ombvsv6b6ofgif-ucsf.siteintercept.qualtrics.com/WRSiteInterceptEngine/?Q_SIID=SI_5iQfYTafpglJOIZ&Q_LOC="+encodeURIComponent(window.location.href))).start()}catch(i){}})();
-/* END QUALTRICS */
+// END QUALTRICS 
 
 // Fix off-campus login link to redirect to current search results after login.
 // We're going to depend on Summon's dependence on jQuery here.
