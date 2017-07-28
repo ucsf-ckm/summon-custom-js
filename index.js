@@ -22,8 +22,7 @@ node.innerHTML += '.topicSummary .content {display:none;}';
 node.innerHTML += '.topicSummary .relatedLibrarian.content,.topicSummary .relatedTopics.content,.topicSummary .researchGuides.content {display:block;}' 
 
 // make PREVIEW toggle more prominent
-node.innerHTML +='.togglePreview {display:inline-block;padding:.2em;background-color:#e5f1f8;} .togglePreview a {color:005380 !important;} .togglePreview.active,.togglePreview:hover{background-color:#007cbe;} .togglePreview.active a {color:#fff !important;} .togglePreview:after {border-top-color#005380 !important;} .togglePreview.active:after {border-bottom-color: #fff !important;}';
-
+node.innerHTML +='.togglePreview {display:inline-block;padding:.2em;background-color:#e5f1f8;} .togglePreview a {color:005380 !important;} .togglePreview:after {border-top-color#005380 !important;}';
 
 // To add more CSS, use lines like this:
 // node.innerHTML += '.selector { font-size: large }';
