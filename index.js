@@ -1,15 +1,34 @@
 'use strict';
 
+// custom CSS
+
 var node = document.createElement('style');
-node.innerHTML = '.siteLinks ul li:first-child,.siteLinks .languageSwitcher{display:none;}'; // hide redundant links in hamburger menu
-node.innerHTML += '.topicSummary .content {display:none;}'; // hide wikipedia panel
-node.innerHTML += '.topicSummary .relatedLibrarian.content,.topicSummary .relatedTopics.content,.topicSummary .researchGuides.content {display:block;}' // show relevant panels
+
+//node.innerHTML = '.siteLinks ul li:first-child,.siteLinks .languageSwitcher{display:none;}'; // hide redundant links in hamburger menu
+
+// hide language switcher in hamburger menu
+node.innerHTML = '.siteLinks .languageSwitcher{display:none;}';
+
+// make Refworks text in VPN banner the same size as other text
+node.innerHTML += '.vpnBanner .btn-link{font-size:inherit;}';
+
+//give VPN banner links more breathing room
+node.innerHTML += '.vpnBanner .list-inline>li{padding-left:8px;padding-right:8px;}' 
+
+// hide wikipedia panel
+node.innerHTML += '.topicSummary .content {display:none;}'; 
+
+// but show relevant panels
+node.innerHTML += '.topicSummary .relatedLibrarian.content,.topicSummary .relatedTopics.content,.topicSummary .researchGuides.content {display:block;}' 
+
+// make PREVIEW toggle more prominent
+node.innerHTML +='.togglePreview {display:inline-block;padding:.2em;background-color:#e5f1f8;} .togglePreview a {color:005380 !important;} .togglePreview.active,.togglePreview:hover{background-color:#007cbe;} .togglePreview.active a {color:#fff !important;} .togglePreview:after {border-top-color#005380 !important;} .togglePreview.active:after {border-bottom-color: #fff !important;}';
+
 
 // To add more CSS, use lines like this:
 // node.innerHTML += '.selector { font-size: large }';
 
 document.body.appendChild(node);
-
 
 // BEGIN QUALTRICS - fresh from scratch Intercept
 var qualtricsNode = document.createElement('div');
