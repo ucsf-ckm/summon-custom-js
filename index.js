@@ -10,7 +10,9 @@ node.innerHTML += '.vpnBanner .btn-link{font-size:inherit;}'; // make Refworks t
 node.innerHTML += '.vpnBanner .list-inline>li{padding-left:8px;padding-right:8px;}'; //give VPN banner links more breathing room
 node.innerHTML += '.topicSummary .content {display:none;}'; // hide wikipedia panel
 node.innerHTML += '.topicSummary .relatedLibrarian.content,.topicSummary .relatedTopics.content,.topicSummary .researchGuides.content {display:block;}'; // but show relevant panels
-node.innerHTML +='.togglePreview {display:inline-block;padding:.2em;background-color:#e5f1f8;} .togglePreview a {color:005380 !important;} .togglePreview:after {border-top-color#005380 !important;}'; // make PREVIEW toggle more prominent
+node.innerHTML += '.togglePreview {display:inline-block;padding:.2em;background-color:#e5f1f8;}'; // make PREVIEW toggle more prominent
+node.innerHTML += '.togglePreview a {color:005380 !important;}'; // make PREVIEW toggle more prominent
+node.innerHTML += '.togglePreview:after {border-top-color#005380 !important;}'; // make PREVIEW toggle more prominent
 
 // To add more CSS, use lines like this:
 // node.innerHTML += '.selector { font-size: large }';
