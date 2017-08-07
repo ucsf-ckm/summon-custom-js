@@ -14,6 +14,7 @@ node.innerHTML += '.topicSummary .relatedLibrarian.content,.topicSummary .relate
 node.innerHTML += '.togglePreview {display:inline-block;padding:.2em;background-color:#e5f1f8;}'; // make PREVIEW toggle more prominent
 node.innerHTML += '.togglePreview a {color:005380 !important;}'; // make PREVIEW toggle more prominent
 node.innerHTML += '.togglePreview:after {border-top-color#005380 !important;}'; // make PREVIEW toggle more prominent
+node.innerHTML += 'span.highlight {background-color:#f26d04;color:#000;font-weight:bold;letter-spacing:.1em;}'; // make staff feedback link in VPN banner stand out
 
 // To add more CSS, use lines like this:
 // node.innerHTML += '.selector { font-size: large }';
