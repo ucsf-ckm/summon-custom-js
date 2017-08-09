@@ -15,6 +15,11 @@ node.innerHTML += '.togglePreview {display:inline-block;padding:.2em .5em;backgr
 node.innerHTML += '.togglePreview a {color:005380 !important;}'; // make PREVIEW toggle more prominent
 node.innerHTML += '.togglePreview:after {border-top-color#005380 !important;}'; // make PREVIEW toggle more prominent
 node.innerHTML += 'span.highlight {background-color:#f26d04;color:#000;font-weight:bold;letter-spacing:.1em;padding:8px;}'; // make staff feedback link in VPN banner stand out
+node.innerHTML += '.availability .availabilityLink {text-decoration: none; color: #007cbe;}'; // standardize availability links to our style
+node.innerHTML += '.authors a {text-decoration: none;}'; // standardize author links to our style
+node.innerHTML += '.availability .availabilityLink {text-decoration: none; color: #007cbe;}'; // standardize availability links to our style
+node.innerHTML += '.authors a {text-decoration: none;}'; // standardize author links to our style
+
 
 // To add more CSS, use lines like this:
 // node.innerHTML += '.selector { font-size: large }';
