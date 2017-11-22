@@ -19,7 +19,8 @@ node.innerHTML += '.availability .availabilityLink {text-decoration: none; color
 node.innerHTML += '.rollup .documentSummary .summary .authors a, .documentSummary .summary .authors a {text-decoration: none;}'; // standardize author links to our style
 node.innerHTML += 'li a[href^="/citation/easybib"] {display:none;}'; // hide EasyBib export option
 node.innerHTML += 'li a[href$="&format=citavi"] {display:none;}'; // hide Citavi export option
-
+node.innerHTML += '.bestBet, .databaseRecommendations {background-color: #fdf0e5;padding-top:1px;}'; // make BEST BETS and DATABASE RECOMMENDATIONS more prominent
+node.innerHTML += '.bestBet .details h3, .databaseRecommendations .details h3 {font-weight:bold;}'; // make BEST BETS and DATABASE RECOMMENDATIONS more prominent
 
 
 
